@@ -18,6 +18,7 @@
 		650059AE258E27C400FF6E14 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059AD258E27C400FF6E14 /* SearchViewController.swift */; };
 		650059B1258E27CF00FF6E14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059B0258E27CF00FF6E14 /* ProfileViewController.swift */; };
 		650059B4258E27EA00FF6E14 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059B3258E27EA00FF6E14 /* AppCoordinator.swift */; };
+		655D662C258E40D000E6F624 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 655D662B258E40D000E6F624 /* avatar.jpg */; };
 		FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		650059AD258E27C400FF6E14 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		650059B0258E27CF00FF6E14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		650059B3258E27EA00FF6E14 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		655D662B258E40D000E6F624 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpg; path = "mvvm-flickr-autolayout/avatar.jpg"; sourceTree = SOURCE_ROOT; };
 		666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_flickr_autolayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.release.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.release.xcconfig"; sourceTree = "<group>"; };
 		D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				6500599A258E265B00FF6E14 /* Views */,
 				65005995258E260E00FF6E14 /* Protocols */,
 				6500597C258E1FB600FF6E14 /* Assets.xcassets */,
+				655D662B258E40D000E6F624 /* avatar.jpg */,
 				6500597E258E1FB600FF6E14 /* LaunchScreen.storyboard */,
 				65005981258E1FB600FF6E14 /* Info.plist */,
 			);
@@ -199,6 +202,7 @@
 			files = (
 				65005980258E1FB600FF6E14 /* LaunchScreen.storyboard in Resources */,
 				6500597D258E1FB600FF6E14 /* Assets.xcassets in Resources */,
+				655D662C258E40D000E6F624 /* avatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,7 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dkunin9.mvvm-flickr-autolayout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -432,7 +436,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dkunin9.mvvm-flickr-autolayout";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
