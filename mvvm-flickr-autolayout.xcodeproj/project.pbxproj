@@ -3,24 +3,38 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		65005974258E1FB400FF6E14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65005973258E1FB400FF6E14 /* AppDelegate.swift */; };
-		65005978258E1FB400FF6E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65005977258E1FB400FF6E14 /* ViewController.swift */; };
 		6500597D258E1FB600FF6E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6500597C258E1FB600FF6E14 /* Assets.xcassets */; };
 		65005980258E1FB600FF6E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500597E258E1FB600FF6E14 /* LaunchScreen.storyboard */; };
+		65005998258E264100FF6E14 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65005997258E264100FF6E14 /* Coordinator.swift */; };
+		6500599F258E271C00FF6E14 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6500599E258E271C00FF6E14 /* MainTabController.swift */; };
+		650059A5258E277400FF6E14 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059A4258E277400FF6E14 /* MainTabCoordinator.swift */; };
+		650059A8258E27AB00FF6E14 /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059A7258E27AB00FF6E14 /* SearchCoordinator.swift */; };
+		650059AB258E27B500FF6E14 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059AA258E27B500FF6E14 /* ProfileCoordinator.swift */; };
+		650059AE258E27C400FF6E14 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059AD258E27C400FF6E14 /* SearchViewController.swift */; };
+		650059B1258E27CF00FF6E14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059B0258E27CF00FF6E14 /* ProfileViewController.swift */; };
+		650059B4258E27EA00FF6E14 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059B3258E27EA00FF6E14 /* AppCoordinator.swift */; };
 		FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		65005970258E1FB400FF6E14 /* mvvm-flickr-autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm-flickr-autolayout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65005973258E1FB400FF6E14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65005977258E1FB400FF6E14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6500597C258E1FB600FF6E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6500597F258E1FB600FF6E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65005981258E1FB600FF6E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65005997258E264100FF6E14 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6500599E258E271C00FF6E14 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
+		650059A4258E277400FF6E14 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		650059A7258E27AB00FF6E14 /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		650059AA258E27B500FF6E14 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		650059AD258E27C400FF6E14 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		650059B0258E27CF00FF6E14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		650059B3258E27EA00FF6E14 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_flickr_autolayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.release.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.release.xcconfig"; sourceTree = "<group>"; };
 		D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -44,7 +58,6 @@
 				D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */,
 				768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -69,13 +82,52 @@
 		65005972258E1FB400FF6E14 /* mvvm-flickr-autolayout */ = {
 			isa = PBXGroup;
 			children = (
-				65005973258E1FB400FF6E14 /* AppDelegate.swift */,
-				65005977258E1FB400FF6E14 /* ViewController.swift */,
+				6500599D258E26C200FF6E14 /* Coordinators */,
+				6500599B258E26AD00FF6E14 /* App */,
+				6500599A258E265B00FF6E14 /* Views */,
+				65005995258E260E00FF6E14 /* Protocols */,
 				6500597C258E1FB600FF6E14 /* Assets.xcassets */,
 				6500597E258E1FB600FF6E14 /* LaunchScreen.storyboard */,
 				65005981258E1FB600FF6E14 /* Info.plist */,
 			);
 			path = "mvvm-flickr-autolayout";
+			sourceTree = "<group>";
+		};
+		65005995258E260E00FF6E14 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				65005997258E264100FF6E14 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6500599A258E265B00FF6E14 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6500599E258E271C00FF6E14 /* MainTabController.swift */,
+				650059AD258E27C400FF6E14 /* SearchViewController.swift */,
+				650059B0258E27CF00FF6E14 /* ProfileViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6500599B258E26AD00FF6E14 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				65005973258E1FB400FF6E14 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6500599D258E26C200FF6E14 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				650059A4258E277400FF6E14 /* MainTabCoordinator.swift */,
+				650059A7258E27AB00FF6E14 /* SearchCoordinator.swift */,
+				650059AA258E27B500FF6E14 /* ProfileCoordinator.swift */,
+				650059B3258E27EA00FF6E14 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		DE3B9BC9F963C7FAA100CF8D /* Frameworks */ = {
@@ -199,8 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65005978258E1FB400FF6E14 /* ViewController.swift in Sources */,
+				6500599F258E271C00FF6E14 /* MainTabController.swift in Sources */,
+				650059AB258E27B500FF6E14 /* ProfileCoordinator.swift in Sources */,
+				650059B4258E27EA00FF6E14 /* AppCoordinator.swift in Sources */,
+				650059AE258E27C400FF6E14 /* SearchViewController.swift in Sources */,
 				65005974258E1FB400FF6E14 /* AppDelegate.swift in Sources */,
+				650059A5258E277400FF6E14 /* MainTabCoordinator.swift in Sources */,
+				650059B1258E27CF00FF6E14 /* ProfileViewController.swift in Sources */,
+				650059A8258E27AB00FF6E14 /* SearchCoordinator.swift in Sources */,
+				65005998258E264100FF6E14 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

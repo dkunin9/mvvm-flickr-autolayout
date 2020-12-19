@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProfileViewController.swift
 //  mvvm-flickr-autolayout
 //
 //  Created by Daniel on 19.12.2020.
@@ -7,14 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ProfileViewController: UIViewController {
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        navigationItem.title = "Second Tab"
         view.backgroundColor = .blue
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
     }
-
-
 }
-
