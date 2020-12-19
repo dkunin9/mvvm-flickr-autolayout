@@ -11,6 +11,7 @@
 		65005978258E1FB400FF6E14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65005977258E1FB400FF6E14 /* ViewController.swift */; };
 		6500597D258E1FB600FF6E14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6500597C258E1FB600FF6E14 /* Assets.xcassets */; };
 		65005980258E1FB600FF6E14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6500597E258E1FB600FF6E14 /* LaunchScreen.storyboard */; };
+		FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,9 @@
 		6500597C258E1FB600FF6E14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6500597F258E1FB600FF6E14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65005981258E1FB600FF6E14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_flickr_autolayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.release.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.release.xcconfig"; sourceTree = "<group>"; };
+		D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +31,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47C45042222196DAE1AC4AB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */,
+				768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		65005967258E1FB400FF6E14 = {
 			isa = PBXGroup;
 			children = (
 				65005972258E1FB400FF6E14 /* mvvm-flickr-autolayout */,
 				65005971258E1FB400FF6E14 /* Products */,
+				47C45042222196DAE1AC4AB7 /* Pods */,
+				DE3B9BC9F963C7FAA100CF8D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +78,14 @@
 			path = "mvvm-flickr-autolayout";
 			sourceTree = "<group>";
 		};
+		DE3B9BC9F963C7FAA100CF8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -68,9 +93,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65005984258E1FB600FF6E14 /* Build configuration list for PBXNativeTarget "mvvm-flickr-autolayout" */;
 			buildPhases = (
+				497E78EAF9B78FE982DFAF4F /* [CP] Check Pods Manifest.lock */,
 				6500596C258E1FB400FF6E14 /* Sources */,
 				6500596D258E1FB400FF6E14 /* Frameworks */,
 				6500596E258E1FB400FF6E14 /* Resources */,
+				7808E14F4A6D9D4DC1A8C1A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +151,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		497E78EAF9B78FE982DFAF4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mvvm-flickr-autolayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7808E14F4A6D9D4DC1A8C1A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6500596C258E1FB400FF6E14 /* Sources */ = {
@@ -269,6 +338,7 @@
 		};
 		65005985258E1FB600FF6E14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,6 +359,7 @@
 		};
 		65005986258E1FB600FF6E14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
