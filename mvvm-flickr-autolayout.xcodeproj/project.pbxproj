@@ -19,6 +19,7 @@
 		650059B1258E27CF00FF6E14 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059B0258E27CF00FF6E14 /* ProfileViewController.swift */; };
 		650059B4258E27EA00FF6E14 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650059B3258E27EA00FF6E14 /* AppCoordinator.swift */; };
 		655D662C258E40D000E6F624 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 655D662B258E40D000E6F624 /* avatar.jpg */; };
+		655D6632258E45F000E6F624 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D6631258E45F000E6F624 /* Photo.swift */; };
 		FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		650059B0258E27CF00FF6E14 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		650059B3258E27EA00FF6E14 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		655D662B258E40D000E6F624 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = avatar.jpg; path = "mvvm-flickr-autolayout/avatar.jpg"; sourceTree = SOURCE_ROOT; };
+		655D6631258E45F000E6F624 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_flickr_autolayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.release.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.release.xcconfig"; sourceTree = "<group>"; };
 		D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +86,8 @@
 		65005972258E1FB400FF6E14 /* mvvm-flickr-autolayout */ = {
 			isa = PBXGroup;
 			children = (
+				655D6630258E45D500E6F624 /* Models */,
+				655D662F258E45C700E6F624 /* ViewModels */,
 				6500599D258E26C200FF6E14 /* Coordinators */,
 				6500599B258E26AD00FF6E14 /* App */,
 				6500599A258E265B00FF6E14 /* Views */,
@@ -131,6 +135,21 @@
 				650059B3258E27EA00FF6E14 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		655D662F258E45C700E6F624 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		655D6630258E45D500E6F624 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				655D6631258E45F000E6F624 /* Photo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		DE3B9BC9F963C7FAA100CF8D /* Frameworks */ = {
@@ -259,6 +278,7 @@
 				650059AB258E27B500FF6E14 /* ProfileCoordinator.swift in Sources */,
 				650059B4258E27EA00FF6E14 /* AppCoordinator.swift in Sources */,
 				650059AE258E27C400FF6E14 /* SearchViewController.swift in Sources */,
+				655D6632258E45F000E6F624 /* Photo.swift in Sources */,
 				65005974258E1FB400FF6E14 /* AppDelegate.swift in Sources */,
 				650059A5258E277400FF6E14 /* MainTabCoordinator.swift in Sources */,
 				650059B1258E27CF00FF6E14 /* ProfileViewController.swift in Sources */,

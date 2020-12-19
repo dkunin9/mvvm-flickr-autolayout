@@ -19,11 +19,11 @@ class MainTabCoordinator: Coordinator {
         mainTabController.coordinator = self
         
         let searchNavigationController = UINavigationController()
-        searchNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        searchNavigationController.tabBarItem = UITabBarItem(title: "First tab", image: nil, tag: 0)
         let searchCoordinator = SearchCoordinator(navigationController: searchNavigationController)
         
         let profileNavigationController = UINavigationController()
-        profileNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 1)
+        profileNavigationController.tabBarItem = UITabBarItem(title: "Second tab", image: nil, tag: 1)
         let profileCoordinator = ProfileCoordinator(navigationController: profileNavigationController)
         
 
