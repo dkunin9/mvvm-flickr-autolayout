@@ -121,7 +121,7 @@ extension ProfileViewController {
 
             containerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
             containerView.autoMatch(.width, to: .width, of: view)
-
+            
 
             avatar.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
             avatar.autoSetDimension(.height, toSize: CGFloat(avatarHeight))

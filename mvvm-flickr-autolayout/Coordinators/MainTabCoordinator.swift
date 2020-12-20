@@ -30,8 +30,12 @@ class MainTabCoordinator: Coordinator {
         mainTabController.viewControllers = [searchNavigationController,
                                             profileNavigationController]
         
-        mainTabController.modalPresentationStyle = .fullScreen
-        navigationController.present(mainTabController, animated: true, completion: nil)
+        
+//        mainTabController.modalPresentationStyle = .fullScreen
+        
+        
+        navigationController.present(mainTabController, animated: true)
+//        navigationController.show(mainTabController, animated: true, completion: nil)
     
         
         coordinate(to: searchCoordinator)

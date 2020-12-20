@@ -7,7 +7,14 @@
 
 import UIKit
 
-class SearchCoordinator: Coordinator {
+protocol SearchFlow: class {
+    func coordinateToDetail(viewModel: SearchResultViewModel)
+}
+
+
+class SearchCoordinator: Coordinator, SearchFlow {
+    
+    
     
     weak var navigationController: UINavigationController?
     
@@ -17,6 +24,18 @@ class SearchCoordinator: Coordinator {
     
     func start() {
         let searchViewController = SearchViewController()
-        navigationController?.pushViewController(searchViewController, animated: false)
+        searchViewController.coordinator = self
+        navigationController?.pushViewController(searchViewController, animated: true)
+    }
+    
+    func coordinateToDetail(viewModel: SearchResultViewModel) {
+        let detailsViewController = DetailsViewController()
+//        detailsViewController.coordinator = self
+        detailsViewController.viewModel = viewModel
+        navigationController?.pushViewController(detailsViewController, animated: true)
+        
+        
+//        let detailsCoordinator = DetailsCoordinator(navigationController: navigationController!)
+//        coordinate(to: detailsCoordinator)
     }
 }
