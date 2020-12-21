@@ -23,6 +23,9 @@ pod install
 * Profile screen with static information
 
 
+### Example
+<img src="https://media.giphy.com/media/gimPMRwkDuy2CodCaw/giphy.gif" width=200px/>
+
 
 ### Plugins used
 

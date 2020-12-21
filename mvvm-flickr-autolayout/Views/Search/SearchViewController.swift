@@ -109,10 +109,8 @@ extension SearchViewController: UICollectionViewDataSource {
         return viewModel.viewModels?.count ?? 0
     }
     
-    
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlickrPhotoCell.identifier, for: indexPath) as! FlickrPhotoCell
         guard let childViewModel = viewModel?.viewModels?[indexPath.row] else { return cell }
         cell.viewModel = childViewModel

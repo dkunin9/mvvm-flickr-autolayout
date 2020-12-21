@@ -106,7 +106,7 @@ extension DetailsViewController {
         
         navigationItem.title = "Details screen"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveImage))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save image", style: .plain, target: self, action: #selector(saveImage))
         navigationController?.tabBarController?.tabBar.isHidden = true
         
         updateContent()
