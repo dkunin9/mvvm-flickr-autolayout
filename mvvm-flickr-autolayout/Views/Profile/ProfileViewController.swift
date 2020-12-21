@@ -28,11 +28,11 @@ class ProfileViewController: UIViewController {
     
     let labelFirstName: UILabel = {
         let label = UILabel.newAutoLayout()
-        label.backgroundColor = .blue
-        label.numberOfLines = 5
         label.lineBreakMode = .byClipping
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.backgroundColor = .white
+        label.numberOfLines = 1
+        label.textColor = .black
+        label.adjustsFontSizeToFitWidth = true
         label.text = "Daniil"
         label.textAlignment = .left
         return label
@@ -41,15 +41,9 @@ class ProfileViewController: UIViewController {
     
     let labelLastName: UILabel = {
         let label = UILabel.newAutoLayout()
-        label.backgroundColor = .blue
+        label.backgroundColor = .white
         label.numberOfLines = 1
-//        label.lineBreakMode = .byClipping
-        label.textColor = .white
-//        label.preferredMaxLayoutWidth = 150/2
-//        label.minimumScaleFactor = 0.5
-//        label.lineBreakMode = .byTruncatingTail
-       // label.font = UIFont.systemFont(ofSize: 16)
-//        label.font = label.font.withSize(label.frame.height * 2/3)
+        label.textColor = .black
         label.adjustsFontSizeToFitWidth = true
         label.text = "Kunin"
         label.textAlignment = .left
@@ -59,10 +53,10 @@ class ProfileViewController: UIViewController {
     
     let labelHeader: UILabel = {
         let label = UILabel.newAutoLayout()
-        label.backgroundColor = .blue
+        label.backgroundColor = .white
         label.numberOfLines = 0
         label.lineBreakMode = .byClipping
-        label.textColor = .white
+        label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 30.0)
         label.text = "BIO"
         return label
@@ -72,11 +66,11 @@ class ProfileViewController: UIViewController {
     
     let labelBio: UILabel = {
         let label = UILabel.newAutoLayout()
-        label.backgroundColor = .blue
+        label.backgroundColor = .white
         label.numberOfLines = 0
         label.lineBreakMode = .byClipping
-        label.textColor = .white
-        label.text = NSLocalizedString("I want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in ElectroluxI want to work in Electrolux", comment: "")
+        label.textColor = .black
+        label.text = NSLocalizedString("My name is Daniil. Last summer I completed an important stage in my life - I received a Bachelor’s degree from Peter the Great St. Petersburg Polytechnic University (SPbPU) in the field of control systems. During these interesting 4 years I have learned a lot of disciplines related to computer science, especially software development and automated control. I also gained practical experience in two different areas - APCS engineering, for which opportunity I'm very grateful to my university, and mobile development which I've dived into by my own. As I have tried myself in both fields, I decided to focus on mobile development which seems to me more interesting and innovative. Hopefully, this test project could explain my potential growth as iOS developer. You can contact me via e-mail: kuningram@gmail.com or telegram: tyjo3", comment: "")
         return label
     }()
     
@@ -117,18 +111,14 @@ extension ProfileViewController {
         if (!didSetupConstraints) {
 
             scrollView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
-            print(scrollView.contentSize)
 
             containerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
             containerView.autoMatch(.width, to: .width, of: view)
             
-
             avatar.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
             avatar.autoSetDimension(.height, toSize: CGFloat(avatarHeight))
             avatar.autoSetDimension(.width, toSize: CGFloat(avatarWidth))
             avatar.autoPinEdge(toSuperviewEdge: .leading, withInset: 20)
-            
-
             
             labelFirstName.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
             labelFirstName.autoPinEdge(.leading, to: .trailing, of: avatar, withOffset: 20)
@@ -138,17 +128,14 @@ extension ProfileViewController {
             labelLastName.autoPinEdge(toSuperviewEdge: .trailing, withInset: 20)
             labelLastName.autoSetDimension(.width, toSize: CGFloat(avatarWidth/2))
             
-            
             labelHeader.autoPinEdge(.top, to: .bottom, of: avatar, withOffset: 10)
             labelHeader.autoAlignAxis(toSuperviewAxis: .vertical)
-            
             
             labelBio.autoPinEdge(.top, to: .bottom, of: labelHeader, withOffset: 10)
             labelBio.autoPinEdge(toSuperviewEdge: .leading, withInset: 20)
             labelBio.autoPinEdge(toSuperviewEdge: .trailing, withInset: 20)
             labelBio.autoPinEdge(toSuperviewEdge: .bottom, withInset: 20)
             
-
             didSetupConstraints = true
       }
    super.updateViewConstraints()

@@ -27,11 +27,11 @@ enum WebServiceError: Error {
 
 final class WebService {
     
-    // MARK: - Constants
+    // MARK : - Constants
     
     let baseURL = "https://api.flickr.com/services/rest"
     
-    // MARK: - Enumerations
+    // MARK: - Enumeration
     
     fileprivate enum APIMethod: String {
         case search = "flickr.photos.search"
@@ -44,7 +44,7 @@ final class WebService {
     }
     
     fileprivate enum AuthMethod: String {
-        case apiKey = "69b939a87a757edf46ce6904e8481656"
+        case apiKey = "1508443e49213ff84d566777dc211f2a"
         static func queryItem(method: AuthMethod) -> URLQueryItem {
             switch method {
             case .apiKey:
@@ -53,12 +53,15 @@ final class WebService {
         }
     }
     
+    // MARK: - Enumat
+    
     fileprivate enum HTTPMethod: String {
         case get = "GET"
         case put = "PUT"
         case post = "POST"
         case delete = "DELETE"
     }
+    
     
     // MARK: - Load Methods
     
@@ -121,5 +124,4 @@ final class WebService {
         return queryItems
     }
 }
-
 

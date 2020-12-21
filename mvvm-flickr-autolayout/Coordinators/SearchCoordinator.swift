@@ -14,9 +14,7 @@ protocol SearchFlow: class {
 
 class SearchCoordinator: Coordinator, SearchFlow {
     
-    
-    
-    weak var navigationController: UINavigationController?
+    var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController

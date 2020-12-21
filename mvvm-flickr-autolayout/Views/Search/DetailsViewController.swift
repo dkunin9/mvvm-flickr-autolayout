@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PureLayout
 
 class DetailsViewController: UIViewController {
 
@@ -13,56 +14,104 @@ class DetailsViewController: UIViewController {
 
     var viewModel: SearchResultViewModel!
 
+    var didSetupConstraints = false
+    
+    var scrollView = UIScrollView.newAutoLayout()
+    var containerView = UIView.newAutoLayout()
+    
     // MARK: - Lazy Inits
 
-    lazy var coverImageView: UIImageView = {
-        let imageView = UIImageView(frame: .zero)
-        imageView.frame.size.width = 150
-        imageView.frame.size.height = 150
+    let flickrImageView: UIImageView = {
+        let imageView = UIImageView.newAutoLayout()
         imageView.backgroundColor = .white
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
+    
+    
+    let labelTitle: UILabel = {
+        let label = UILabel.newAutoLayout()
+        label.lineBreakMode = .byClipping
+        label.backgroundColor = .white
+        label.numberOfLines = 1
+        label.textColor = .black
+        label.adjustsFontSizeToFitWidth = true
+        label.text = "Title"
+        label.textAlignment = .left
+        return label
+    }()
+    
+    
 
     // MARK: - View Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Details screen"
-        view.backgroundColor = .yellow
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        
-        
-        print(viewModel.imageURL)
-        setupConstraints()
-        
-        updateContent()
-    }
-    
-    func back() {
-        coordinator?.dismissDetail()
-            }
-    
-    var coordinator: DetailsFlow?
-
-    // MARK: - Setup Views
-
-    func setupConstraints() {
-        view.addSubview(coverImageView)
-//        var constraints: [NSLayoutConstraint] = []
-//        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "H:|[coverImageView]|", options: [], metrics: nil, views: ["coverImageView": coverImageView]))
-//        constraints.append(contentsOf: NSLayoutConstraint.constraints(withVisualFormat: "V:|[coverImageView]|", options: [], metrics: nil, views: ["coverImageView": coverImageView]))
-//        NSLayoutConstraint.activate(constraints)
     }
 
     func updateContent() {
-        print(viewModel?.imageURL)
+        if (viewModel.title == "") {
+            labelTitle.text = "Title not given"
+        }
+        else {
+            labelTitle.text = viewModel.title
+        }
         guard let imageURL = viewModel?.imageURL else { return }
-        ImageService.downloadImage(from: imageURL) { [weak self] image in
-            self?.coverImageView.image = image
-            print(image!)
+        ImageService.downloadImage(from: imageURL) { [self] image in
+            flickrImageView.image = image
         }
     }
 
+}
+
+
+extension DetailsViewController {
+
+    override func loadView() {
+        super.viewDidLoad()
+        view = UIView()
+
+        view.addSubview(scrollView)
+        
+        view.backgroundColor = .white
+        scrollView.backgroundColor = .white
+        containerView.backgroundColor = .white
+        
+        scrollView.addSubview(containerView)
+        containerView.addSubview(labelTitle)
+        containerView.addSubview((flickrImageView))
+        
+        
+        navigationItem.title = "Details screen"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
+        updateContent()
+   }
+
+    
+    override func viewDidLayoutSubviews() {
+            view.setNeedsUpdateConstraints()
+        }
+
+
+    override func updateViewConstraints() {
+
+        if (!didSetupConstraints) {
+
+            scrollView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
+
+            containerView.autoPinEdgesToSuperviewEdges(with: UIEdgeInsets.zero)
+            containerView.autoMatch(.width, to: .width, of: view)
+            
+            labelTitle.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
+            labelTitle.autoAlignAxis(toSuperviewAxis: .vertical)
+            flickrImageView.autoPinEdge(.top, to: .bottom, of: labelTitle, withOffset: 20)
+            flickrImageView.autoMatch(.width, to: .width, of: view)
+            
+            
+            didSetupConstraints = true
+      }
+   super.updateViewConstraints()
+  }
 }

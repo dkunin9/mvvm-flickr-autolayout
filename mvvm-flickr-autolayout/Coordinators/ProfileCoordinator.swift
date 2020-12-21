@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileCoordinator: Coordinator {
     
-    weak var navigationController: UINavigationController?
+    var navigationController: UINavigationController?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,7 +17,7 @@ class ProfileCoordinator: Coordinator {
     
     func start() {
         let profileViewController = ProfileViewController()
-        navigationController?.pushViewController(profileViewController, animated: false)
+        navigationController?.pushViewController(profileViewController, animated: true)
     }
     
 

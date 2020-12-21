@@ -11,16 +11,14 @@ class SearchViewController: UIViewController {
    
    // MARK: - Private
     var didSetupConstraints = false
-    private var collectionView: UICollectionView!
+    
+    var collectionView: UICollectionView!
+    
     var searchController = UISearchController(searchResultsController: nil)
     
     var viewModel: SearchListViewModel!
-
-//    private var searchBarIsEmpty: Bool {
-//        guard let text = searchController.searchBar.text else { return false }
-//        return text.isEmpty
-//    }
     
+    var coordinator: SearchFlow?
     
    // MARK: - View Life Cycle
    
@@ -31,14 +29,12 @@ class SearchViewController: UIViewController {
         navigationItem.title = "First"
    }
     
-    var coordinator: SearchFlow?
+
    
    // MARK: - Setup Views
    
    func initializeSearchControllers() {
-//       let searchResultsViewController = SearchResultsViewController()
        viewModel = SearchListViewModel(webService: WebService())
-    
        let placeholderText = NSLocalizedString("Search Images", comment: "Search placeholder text")
        searchController.searchBar.placeholder = placeholderText
        searchController.searchResultsUpdater = self
@@ -64,6 +60,7 @@ class SearchViewController: UIViewController {
 
         view.addSubview(collectionView)
         collectionView.autoPinEdgesToSuperviewSafeArea()
+        
         
         collectionView.register(FlickrPhotoCell.self, forCellWithReuseIdentifier: FlickrPhotoCell.identifier)
         
@@ -113,13 +110,8 @@ extension SearchViewController: UISearchResultsUpdating {
 
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
         guard let searchResultViewModel = viewModel.viewModels?[indexPath.item] else { return }
-        
         coordinator?.coordinateToDetail(viewModel: searchResultViewModel)
-        print(searchResultViewModel.imageURL)
-        print(viewModel.viewModels?[indexPath.item].imageURL)
-        print("coordinated?")
     }
 }
 
