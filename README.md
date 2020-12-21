@@ -24,7 +24,7 @@ pod install
 
 
 ### Example
-<img src="https://media.giphy.com/media/gimPMRwkDuy2CodCaw/giphy.gif" width=200px/>
+![](https://media.giphy.com/media/gimPMRwkDuy2CodCaw/giphy.gif)
 
 
 ### Plugins used
