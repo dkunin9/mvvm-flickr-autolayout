@@ -49,15 +49,17 @@ class DetailsViewController: UIViewController {
         
     }
     
-    // MARK: - "Back" button
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
 
+    // MARK: - Methods
     
-    
+    /*
+     downloading image to self
+     */
     func updateContent() {
         if (viewModel.title == "") {
             labelTitle.text = "Title not given"

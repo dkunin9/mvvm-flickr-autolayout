@@ -8,6 +8,9 @@
 import Foundation
 
 class SearchGroup {
+    
+    // MARK: - Variables
+    
     var searchResults: [SearchResult]?
     var page: Int?
     var perPage: Int?
@@ -20,9 +23,9 @@ class SearchGroup {
             if let perPage = photosDictionary["perpage"] as? Int {
                 self.perPage = perPage
             }
-            var photos = [Photo]()
+            var photos = [FlickrPhoto]()
             for dictionary in photosDictionaryArray {
-                let photo = Photo(with: dictionary)
+                let photo = FlickrPhoto(with: dictionary)
                 photos.append(photo)
             }
             self.searchResults = photos

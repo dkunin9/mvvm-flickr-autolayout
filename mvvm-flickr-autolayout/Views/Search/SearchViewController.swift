@@ -8,6 +8,8 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
+    // MARK: - Variables
    
     var didSetupConstraints = false
     
@@ -28,7 +30,7 @@ class SearchViewController: UIViewController {
         navigationItem.title = "First"
     }
    
-   // MARK: - Search controller
+   // MARK: - Methods
    
     func initializeSearchControllers() {
         
@@ -43,8 +45,6 @@ class SearchViewController: UIViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
     }
-    
-    // MARK: - Collection view
     
     func setupCollectionView() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -62,7 +62,7 @@ class SearchViewController: UIViewController {
 
         view.addSubview(collectionView)
         
-        // Initial pin of collectionView
+        // Init pin of collectionView
         collectionView.autoPinEdgesToSuperviewSafeArea()
         
         // Register cell class
@@ -95,7 +95,7 @@ extension SearchViewController: UISearchResultsUpdating {
         }
         /*
          Pass search term to ViewModel
-         Repin collectionView
+         Repin & init collectionView
          */
         else {
             view.backgroundColor = .white
@@ -142,9 +142,8 @@ extension SearchViewController: UICollectionViewDataSource {
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let isLandscape = UIApplication.shared.statusBarOrientation.isLandscape
-//        let cellPadding: CGFloat = 16.0
-//        let cellWidth = (isLandscape ? (collectionView.frame.size.width / 5.0) : (collectionView.frame.size.width / 2.0)) - cellPadding
+        
+        // TODO: Autolayout cells size
         let cellWidth = 150.0
         let cellHeight = cellWidth
         return CGSize(width: cellWidth, height: cellHeight)

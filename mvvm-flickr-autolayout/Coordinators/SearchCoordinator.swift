@@ -25,7 +25,6 @@ class SearchCoordinator: Coordinator, SearchFlow {
         searchViewController.coordinator = self
         navigationController?.pushViewController(searchViewController, animated: true)
         navigationController?.navigationBar.barTintColor = .gray
-        
     }
     
     func coordinateToDetail(viewModel: SearchResultViewModel) {

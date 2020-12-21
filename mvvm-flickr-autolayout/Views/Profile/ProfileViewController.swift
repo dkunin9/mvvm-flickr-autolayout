@@ -66,16 +66,17 @@ class ProfileViewController: UIViewController {
     }()
     
     
-    
     lazy var labelBio: UILabel = {
         let label = UILabel.newAutoLayout()
         label.backgroundColor = .white
         label.numberOfLines = 0
         label.lineBreakMode = .byClipping
         label.textColor = .black
-        label.text = NSLocalizedString("My name is Daniil. Last summer I completed an important stage in my life - I received a Bachelor’s degree from Peter the Great St. Petersburg Polytechnic University (SPbPU) in the field of control systems. During these interesting 4 years I have learned a lot of disciplines related to computer science, especially software development and automated control. I also gained practical experience in two different areas - APCS engineering, for which opportunity I'm very grateful to my university, and mobile development which I've dived into by my own. As I have tried myself in both fields, I decided to focus on mobile development which seems to me more interesting and innovative. Hopefully, this test project could explain my potential growth as iOS developer. You can contact me via e-mail: kuningram@gmail.com or telegram: tyjo3", comment: "")
+        label.text = NSLocalizedString("My name is Daniil. Last summer I completed an important stage in my life - I received a Bachelor’s degree from Peter the Great St. Petersburg Polytechnic University (SPbPU) in the field of control systems. During these interesting 4 years I have learned a lot of disciplines related to computer science, especially software development and automated control. I also gained practical experience in two different areas - APCS engineering, for which opportunity I'm very grateful to my university, and mobile development which I've dived into by my own. As I have tried myself in both fields, I decided to focus on mobile development which seems to me more interesting and innovative. Hopefully, this test project could explain my potential growth as iOS developer. You can contact me via e-mail: kuningram@gmail.com or telegram: tyjo3", comment: "Bio")
         return label
     }()
+    
+    // MARK: View Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()

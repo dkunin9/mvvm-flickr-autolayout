@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-extension Photo: SearchResult {}
+extension FlickrPhoto: SearchResult {}
 
-struct Photo {
+struct FlickrPhoto {
     var id: String?
     var ownerID: String?
     var title: String?

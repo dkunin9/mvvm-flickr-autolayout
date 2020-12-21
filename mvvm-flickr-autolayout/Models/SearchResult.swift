@@ -8,6 +8,7 @@
 import Foundation
 
 protocol SearchResult {
+    
     var id: String? { get set }
     var title: String? { get set }
     var thumbnailURL: URL? { get set }
