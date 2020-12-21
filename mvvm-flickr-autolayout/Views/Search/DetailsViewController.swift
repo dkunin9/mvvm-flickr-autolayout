@@ -10,7 +10,8 @@ import PureLayout
 
 class DetailsViewController: UIViewController {
 
-
+    // MARK: - Variables
+    
     var viewModel: SearchResultViewModel!
 
     var didSetupConstraints = false
@@ -18,7 +19,7 @@ class DetailsViewController: UIViewController {
     var scrollView = UIScrollView.newAutoLayout()
     var containerView = UIView.newAutoLayout()
     
-    // MARK: - Lazy Inits
+
 
     let flickrImageView: UIImageView = {
         let imageView = UIImageView.newAutoLayout()
@@ -47,7 +48,6 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.tabBarController?.tabBar.isHidden = true
         
     }
     
@@ -68,22 +68,6 @@ class DetailsViewController: UIViewController {
             flickrImageView.image = image
         }
     }
-    
-    func hideTabBar() {
-//        var frame = self.tabBarController?.tabBar.frame
-//        frame?.origin.y = self.view.frame.size.height + (frame?.size.height)!
-//        UIView.animate(withDuration: 0.5, animations: {
-//            self.tabBarController?.tabBar.frame = frame!
-//        })
-    }
-    
-//    func showTabBar() {
-//        var frame = self.tabBarController?.tabBar.frame
-//        frame?.y = self.view.frame.size.height - (frame?.size.height)!
-//        UIView.animate(withDuration: 0.5, animations: {
-//            self.tabBarController?.tabBar.frame = frame!
-//        })
-//    }
 }
 
 
@@ -103,12 +87,9 @@ extension DetailsViewController {
         containerView.addSubview(labelTitle)
         containerView.addSubview((flickrImageView))
         
-        
         navigationItem.title = "Details screen"
-        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
-        
-        navigationItem.backBarButtonItem?.action
+        navigationController?.tabBarController?.tabBar.isHidden = true
         
         updateContent()
    }
@@ -131,9 +112,9 @@ extension DetailsViewController {
             labelTitle.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
             labelTitle.autoMatch(.width, to: .width, of: view)
             labelTitle.autoAlignAxis(toSuperviewAxis: .vertical)
+            
             flickrImageView.autoPinEdge(.top, to: .bottom, of: labelTitle, withOffset: 20)
             flickrImageView.autoMatch(.width, to: .width, of: view)
-            
             
             didSetupConstraints = true
       }

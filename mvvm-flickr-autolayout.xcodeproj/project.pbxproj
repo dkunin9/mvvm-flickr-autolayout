@@ -27,7 +27,6 @@
 		655D6649258EBE2F00E6F624 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D6648258EBE2F00E6F624 /* DetailsViewController.swift */; };
 		655D664C258EBF8100E6F624 /* SearchResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D664B258EBF8100E6F624 /* SearchResultViewModel.swift */; };
 		655D6650258EBFDC00E6F624 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D664F258EBFDC00E6F624 /* WebService.swift */; };
-		655D6653258EC1A300E6F624 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D6652258EC1A300E6F624 /* DetailsCoordinator.swift */; };
 		655D665D258F7DCA00E6F624 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D665C258F7DCA00E6F624 /* Dynamic.swift */; };
 		655D6661258F810A00E6F624 /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D6660258F810A00E6F624 /* Throttler.swift */; };
 		655D667B258FA7D300E6F624 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D667A258FA7D300E6F624 /* ImageService.swift */; };
@@ -58,7 +57,6 @@
 		655D6648258EBE2F00E6F624 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		655D664B258EBF8100E6F624 /* SearchResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewModel.swift; sourceTree = "<group>"; };
 		655D664F258EBFDC00E6F624 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		655D6652258EC1A300E6F624 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
 		655D665C258F7DCA00E6F624 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		655D6660258F810A00E6F624 /* Throttler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttler.swift; sourceTree = "<group>"; };
 		655D667A258FA7D300E6F624 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -159,7 +157,6 @@
 				650059A4258E277400FF6E14 /* MainTabCoordinator.swift */,
 				650059A7258E27AB00FF6E14 /* SearchCoordinator.swift */,
 				650059AA258E27B500FF6E14 /* ProfileCoordinator.swift */,
-				655D6652258EC1A300E6F624 /* DetailsCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -351,7 +348,6 @@
 				655D6650258EBFDC00E6F624 /* WebService.swift in Sources */,
 				650059AE258E27C400FF6E14 /* SearchViewController.swift in Sources */,
 				655D663D258EB23C00E6F624 /* FlickrPhotoCell.swift in Sources */,
-				655D6653258EC1A300E6F624 /* DetailsCoordinator.swift in Sources */,
 				655D6632258E45F000E6F624 /* FlickrPhoto.swift in Sources */,
 				655D664C258EBF8100E6F624 /* SearchResultViewModel.swift in Sources */,
 				655D6642258EBC4400E6F624 /* SearchResult.swift in Sources */,

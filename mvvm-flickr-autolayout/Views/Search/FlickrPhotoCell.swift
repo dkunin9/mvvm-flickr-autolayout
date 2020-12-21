@@ -8,9 +8,22 @@
 import UIKit
 import PureLayout
 
+
+
 class FlickrPhotoCell: UICollectionViewCell {
   
     static let identifier = "FlickrPhotoCell"
+    
+    lazy var spinner: UIActivityIndicatorView = {
+        let spinnerView = UIActivityIndicatorView.newAutoLayout()
+        spinnerView.transform = CGAffineTransform.init(scaleX: 2, y: 2)
+        spinnerView.translatesAutoresizingMaskIntoConstraints = false
+        spinnerView.backgroundColor = .red
+        spinnerView.contentMode = .scaleAspectFit
+        spinnerView.color = .gray
+        spinnerView.center = CGPoint(x: contentView.frame.size.width / 2, y: contentView.frame.size.height / 2)
+        return spinnerView
+    }()
     
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView.newAutoLayout()
@@ -19,6 +32,7 @@ class FlickrPhotoCell: UICollectionViewCell {
         imageView.backgroundColor = .white
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
+        imageView.layer.borderWidth = 1
         return imageView
     }()
     
@@ -43,6 +57,7 @@ class FlickrPhotoCell: UICollectionViewCell {
 
     fileprivate func addViews(){
         addSubview(thumbnailImageView)
+        addSubview(spinner)
      }
     
     override func prepareForReuse() {
@@ -50,9 +65,11 @@ class FlickrPhotoCell: UICollectionViewCell {
         thumbnailImageView.image = nil
     }
     
+    
     func updateContent() {
         guard let viewModel = viewModel, let imageURL = viewModel.imageURL else { return }
         ImageService.downloadImage(from: imageURL) { [self] image in
+            spinner.stopAnimating()
             thumbnailImageView.image = image
         }
     }

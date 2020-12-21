@@ -30,10 +30,7 @@ class SearchCoordinator: Coordinator, SearchFlow {
     
     func coordinateToDetail(viewModel: SearchResultViewModel) {
         let detailsViewController = DetailsViewController()
-//        detailsViewController.coordinator = self
         detailsViewController.viewModel = viewModel
         navigationController?.pushViewController(detailsViewController, animated: true)
-//        let detailsCoordinator = DetailsCoordinator(navigationController: navigationController!)
-//        coordinate(to: detailsCoordinator)
     }
 }

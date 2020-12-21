@@ -44,7 +44,7 @@ class SearchListViewModel {
     
     // MARK: - Fileprivate
     
-    fileprivate let interval: Double = 1.5
+    fileprivate let interval: Double = 0.5
     fileprivate var webService: WebService!
     var searchGroup: SearchGroup?
     
