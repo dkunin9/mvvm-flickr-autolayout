@@ -19,7 +19,9 @@ pod install
 * Browse images from flickr with specific term
 * Loading indicator while downloading image
 * Fullscreen image with title
+* Save image to phone gallery
 * Profile screen with static information
+
 
 
 ### Plugins used
