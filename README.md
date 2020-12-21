@@ -29,8 +29,6 @@ pod install
 
 
 ### Example
-![](https://github.com/dkunin9/mvvm-flickr-autolayout/blob/master/mvvm-flickr-autolayout/example.gif)
+![gif](https://github.com/dkunin9/mvvm-flickr-autolayout/example.gif)
 
-
-<img src="https://github.com/dkunin9/mvvm-flickr-autolayout/blob/master/mvvm-flickr-autolayout/example.gif" alt="Databay showcase gif" title="Readme test" width="500"/>
-
+![til](./mvvm-flickr-autolayout/example.gif)
