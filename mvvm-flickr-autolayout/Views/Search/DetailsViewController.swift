@@ -9,8 +9,6 @@ import UIKit
 import PureLayout
 
 class DetailsViewController: UIViewController {
-
-    // MARK: - Variables
     
     var viewModel: SearchResultViewModel!
 

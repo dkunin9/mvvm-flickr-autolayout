@@ -9,7 +9,6 @@ import UIKit
 
 class SearchViewController: UIViewController {
    
-   // MARK: - Variables
     var didSetupConstraints = false
     
     var collectionView: UICollectionView!
@@ -28,8 +27,6 @@ class SearchViewController: UIViewController {
         view.backgroundColor = .white
         navigationItem.title = "First"
    }
-    
-
    
    // MARK: - Setup Views
    
@@ -106,6 +103,7 @@ extension SearchViewController: UICollectionViewDelegate {
     }
 }
 
+
 extension SearchViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.viewModels?.count ?? 0
@@ -124,6 +122,7 @@ extension SearchViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
 
 extension SearchViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
