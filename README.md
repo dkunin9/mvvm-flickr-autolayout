@@ -29,6 +29,4 @@ pod install
 
 
 ### Example
-![gif](https://github.com/dkunin9/mvvm-flickr-autolayout/example.gif)
-
 ![til](./mvvm-flickr-autolayout/example.gif)
