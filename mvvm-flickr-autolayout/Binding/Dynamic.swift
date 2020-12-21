@@ -42,8 +42,10 @@ class Dynamic<T> {
     }
 }
 
-extension UIViewController {
 
+// MARK: - WebService error
+
+extension UIViewController {
     func presentAlertForError(with error: Error?) {
         guard let error = error else { return }
         let errorTitle = NSLocalizedString("Oops.. Something went wrong. 😥", comment: "Error alert title")

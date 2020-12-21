@@ -34,11 +34,12 @@ class MainTabCoordinator: Coordinator {
         
         
 //        mainTabController.modalPresentationStyle = .fullScreen
-        navigationController.navigationBar.barTintColor = .black
+//        navigationController.navigationBar.barTintColor = .black
         
-        navigationController.present(mainTabController, animated: true)
+//        navigationController.present(mainTabController, animated: true)
+        navigationController.pushViewController(mainTabController, animated: true)
 //        navigationController.show(mainTabController, animated: true, completion: nil)
-    
+        navigationController.isNavigationBarHidden = true
         
         coordinate(to: searchCoordinator)
         coordinate(to: profileCoordinator)

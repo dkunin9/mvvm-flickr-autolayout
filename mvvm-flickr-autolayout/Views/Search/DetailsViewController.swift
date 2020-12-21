@@ -18,7 +18,9 @@ class DetailsViewController: UIViewController {
     var containerView = UIView.newAutoLayout()
     
 
-    let flickrImageView: UIImageView = {
+    // MARK: - Lazy variables
+    
+    lazy var flickrImageView: UIImageView = {
         let imageView = UIImageView.newAutoLayout()
         imageView.backgroundColor = .white
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -27,7 +29,7 @@ class DetailsViewController: UIViewController {
     }()
     
     
-    let labelTitle: UILabel = {
+    lazy var labelTitle: UILabel = {
         let label = UILabel.newAutoLayout()
         label.lineBreakMode = .byClipping
         label.backgroundColor = .white
@@ -47,11 +49,15 @@ class DetailsViewController: UIViewController {
         
     }
     
+    // MARK: - "Back" button
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         navigationController?.tabBarController?.tabBar.isHidden = false
     }
 
+    
+    
     func updateContent() {
         if (viewModel.title == "") {
             labelTitle.text = "Title not given"
@@ -110,12 +116,12 @@ extension DetailsViewController {
         navigationController?.tabBarController?.tabBar.isHidden = true
         
         updateContent()
-   }
+    }
 
     
     override func viewDidLayoutSubviews() {
-            view.setNeedsUpdateConstraints()
-        }
+        view.setNeedsUpdateConstraints()
+    }
 
 
     override func updateViewConstraints() {
@@ -137,5 +143,5 @@ extension DetailsViewController {
             didSetupConstraints = true
       }
    super.updateViewConstraints()
-  }
+    }
 }

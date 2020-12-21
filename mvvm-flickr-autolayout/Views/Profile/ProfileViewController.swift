@@ -18,7 +18,10 @@ class ProfileViewController: UIViewController {
     let avatarWidth = 150
     let avatarHeight = 150
 
-    let avatar: UIImageView = {
+    
+    // MARK: - Lazy variables
+    
+    lazy var avatar: UIImageView = {
         let imageView = UIImageView.newAutoLayout()
         imageView.image = UIImage(named: "avatar.jpg")
         imageView.layer.borderWidth = 1
@@ -26,7 +29,7 @@ class ProfileViewController: UIViewController {
     }()
     
     
-    let labelFirstName: UILabel = {
+    lazy var labelFirstName: UILabel = {
         let label = UILabel.newAutoLayout()
         label.lineBreakMode = .byClipping
         label.backgroundColor = .white
@@ -39,7 +42,7 @@ class ProfileViewController: UIViewController {
     }()
     
     
-    let labelLastName: UILabel = {
+    lazy var labelLastName: UILabel = {
         let label = UILabel.newAutoLayout()
         label.backgroundColor = .white
         label.numberOfLines = 1
@@ -51,7 +54,7 @@ class ProfileViewController: UIViewController {
     }()
     
     
-    let labelHeader: UILabel = {
+    lazy var labelHeader: UILabel = {
         let label = UILabel.newAutoLayout()
         label.backgroundColor = .white
         label.numberOfLines = 0
@@ -64,7 +67,7 @@ class ProfileViewController: UIViewController {
     
     
     
-    let labelBio: UILabel = {
+    lazy var labelBio: UILabel = {
         let label = UILabel.newAutoLayout()
         label.backgroundColor = .white
         label.numberOfLines = 0

@@ -8,11 +8,13 @@
 import UIKit
 import PureLayout
 
-
-
 class FlickrPhotoCell: UICollectionViewCell {
   
+    // MARK: - Variables
+    
     static let identifier = "FlickrPhotoCell"
+    
+    // MARK: - Lazy variables
     
     lazy var spinner: UIActivityIndicatorView = {
         let spinnerView = UIActivityIndicatorView.newAutoLayout()
@@ -25,7 +27,7 @@ class FlickrPhotoCell: UICollectionViewCell {
         return spinnerView
     }()
     
-    let thumbnailImageView: UIImageView = {
+    lazy var thumbnailImageView: UIImageView = {
         let imageView = UIImageView.newAutoLayout()
         imageView.frame.size.width = 150
         imageView.frame.size.height = 150
@@ -36,11 +38,13 @@ class FlickrPhotoCell: UICollectionViewCell {
         return imageView
     }()
     
+    
     var viewModel: SearchResultViewModel? {
         didSet {
             updateContent()
         }
     }
+    
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -58,14 +62,17 @@ class FlickrPhotoCell: UICollectionViewCell {
     fileprivate func addViews(){
         addSubview(thumbnailImageView)
         addSubview(spinner)
-     }
+    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         thumbnailImageView.image = nil
     }
     
-    
+    /*
+     Download image from ViewModel URL
+     Stop spinner animation if image is downloaded
+     */
     func updateContent() {
         guard let viewModel = viewModel, let imageURL = viewModel.imageURL else { return }
         ImageService.downloadImage(from: imageURL) { [self] image in

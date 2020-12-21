@@ -21,25 +21,30 @@ class SearchViewController: UIViewController {
     
    // MARK: - View Life Cycle
    
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         initializeSearchControllers()
         view.backgroundColor = .white
         navigationItem.title = "First"
-   }
+    }
    
-   // MARK: - Setup Views
+   // MARK: - Search controller
    
-   func initializeSearchControllers() {
+    func initializeSearchControllers() {
+        
         viewModel = SearchListViewModel(webService: WebService())
         let placeholderText = NSLocalizedString("Search Images", comment: "Search placeholder text")
         searchController.searchBar.placeholder = placeholderText
         searchController.searchResultsUpdater = self
         searchController.searchBar.backgroundColor = .gray
+        searchController.searchBar.tintColor = .white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
-   }
+    }
+    
+    // MARK: - Collection view
     
     func setupCollectionView() {
         let flowLayout = UICollectionViewFlowLayout()
@@ -56,8 +61,11 @@ class SearchViewController: UIViewController {
         collectionView.isUserInteractionEnabled = true
 
         view.addSubview(collectionView)
+        
+        // Initial pin of collectionView
         collectionView.autoPinEdgesToSuperviewSafeArea()
         
+        // Register cell class
         collectionView.register(FlickrPhotoCell.self, forCellWithReuseIdentifier: FlickrPhotoCell.identifier)
     }
     
@@ -75,26 +83,34 @@ class SearchViewController: UIViewController {
 }
 
 
+// MARK: - Search term text updates
+
 extension SearchViewController: UISearchResultsUpdating {
-   func updateSearchResults(for searchController: UISearchController) {
-    
-    if !searchController.isActive {
-        collectionView.autoPinEdgesToSuperviewSafeArea()
+    func updateSearchResults(for searchController: UISearchController) {
+        
+         // Repin collectionView after search controller misses focus
+        if !searchController.isActive {
+            collectionView.autoPinEdgesToSuperviewSafeArea()
             return
         }
-    else {
-        view.backgroundColor = .white
-        guard let searchTerm = searchController.searchBar.text else { return }
+        /*
+         Pass search term to ViewModel
+         Repin collectionView
+         */
+        else {
+            view.backgroundColor = .white
+            guard let searchTerm = searchController.searchBar.text else { return }
         
-        if searchController.searchBar.text != "" {
-            viewModel.searchTerm = searchTerm
-            setupCollectionView()
-            setupBindings()
+            if searchController.searchBar.text != "" {
+                viewModel.searchTerm = searchTerm
+                setupCollectionView()
+                setupBindings()
+            }
         }
     }
-   }
 }
 
+// MARK: - Item selection
 
 extension SearchViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -108,8 +124,10 @@ extension SearchViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.viewModels?.count ?? 0
     }
-    
-
+    /*
+     Pass ViewModel[index] to each cell of collectionView
+     Start spinner animation
+     */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FlickrPhotoCell.identifier, for: indexPath) as! FlickrPhotoCell
         guard let childViewModel = viewModel?.viewModels?[indexPath.row] else { return cell }
