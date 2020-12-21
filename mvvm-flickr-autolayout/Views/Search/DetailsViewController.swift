@@ -18,7 +18,6 @@ class DetailsViewController: UIViewController {
     var containerView = UIView.newAutoLayout()
     
 
-
     let flickrImageView: UIImageView = {
         let imageView = UIImageView.newAutoLayout()
         imageView.backgroundColor = .white
@@ -39,7 +38,6 @@ class DetailsViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-    
     
 
     // MARK: - View Life Cycle
@@ -66,6 +64,27 @@ class DetailsViewController: UIViewController {
             flickrImageView.image = image
         }
     }
+    
+    
+    //MARK: - Save image
+
+    @objc func saveImage() {
+        guard let selectedImage = flickrImageView.image else {
+            return
+        }
+        UIImageWriteToSavedPhotosAlbum(selectedImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+
+    //MARK: - Save Image callback
+
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+
+        if let error = error {
+            print(error.localizedDescription)
+        } else {
+            print("Successfully saved")
+        }
+    }
 }
 
 
@@ -87,6 +106,7 @@ extension DetailsViewController {
         
         navigationItem.title = "Details screen"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveImage))
         navigationController?.tabBarController?.tabBar.isHidden = true
         
         updateContent()
