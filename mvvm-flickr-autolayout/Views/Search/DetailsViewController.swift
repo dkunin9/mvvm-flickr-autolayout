@@ -33,11 +33,11 @@ class DetailsViewController: UIViewController {
         let label = UILabel.newAutoLayout()
         label.lineBreakMode = .byClipping
         label.backgroundColor = .white
-        label.numberOfLines = 1
+        label.numberOfLines = 3
         label.textColor = .black
         label.adjustsFontSizeToFitWidth = true
         label.text = "Title"
-        label.textAlignment = .left
+        label.textAlignment = .center
         return label
     }()
     
@@ -47,6 +47,13 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.tabBarController?.tabBar.isHidden = true
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.tabBarController?.tabBar.isHidden = false
     }
 
     func updateContent() {
@@ -61,7 +68,22 @@ class DetailsViewController: UIViewController {
             flickrImageView.image = image
         }
     }
-
+    
+    func hideTabBar() {
+//        var frame = self.tabBarController?.tabBar.frame
+//        frame?.origin.y = self.view.frame.size.height + (frame?.size.height)!
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.tabBarController?.tabBar.frame = frame!
+//        })
+    }
+    
+//    func showTabBar() {
+//        var frame = self.tabBarController?.tabBar.frame
+//        frame?.y = self.view.frame.size.height - (frame?.size.height)!
+//        UIView.animate(withDuration: 0.5, animations: {
+//            self.tabBarController?.tabBar.frame = frame!
+//        })
+//    }
 }
 
 
@@ -83,7 +105,10 @@ extension DetailsViewController {
         
         
         navigationItem.title = "Details screen"
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
+        
+        navigationItem.backBarButtonItem?.action
         
         updateContent()
    }
@@ -104,6 +129,7 @@ extension DetailsViewController {
             containerView.autoMatch(.width, to: .width, of: view)
             
             labelTitle.autoPinEdge(toSuperviewEdge: .top, withInset: 20)
+            labelTitle.autoMatch(.width, to: .width, of: view)
             labelTitle.autoAlignAxis(toSuperviewAxis: .vertical)
             flickrImageView.autoPinEdge(.top, to: .bottom, of: labelTitle, withOffset: 20)
             flickrImageView.autoMatch(.width, to: .width, of: view)

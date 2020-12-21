@@ -9,7 +9,7 @@ import UIKit
 
 class SearchViewController: UIViewController {
    
-   // MARK: - Private
+   // MARK: - Variables
     var didSetupConstraints = false
     
     var collectionView: UICollectionView!
@@ -98,7 +98,6 @@ extension SearchViewController: UISearchResultsUpdating {
         }
     else {
         view.backgroundColor = .white
-        print(searchController.searchBar.text!)
         guard let searchTerm = searchController.searchBar.text else { return }
         viewModel.searchTerm = searchTerm
         setupCollectionView()

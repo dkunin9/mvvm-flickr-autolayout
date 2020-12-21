@@ -34,7 +34,7 @@ class MainTabCoordinator: Coordinator {
         
         
 //        mainTabController.modalPresentationStyle = .fullScreen
-        
+        navigationController.navigationBar.barTintColor = .black
         
         navigationController.present(mainTabController, animated: true)
 //        navigationController.show(mainTabController, animated: true, completion: nil)

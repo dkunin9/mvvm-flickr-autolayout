@@ -18,6 +18,9 @@ class ProfileCoordinator: Coordinator {
     func start() {
         let profileViewController = ProfileViewController()
         navigationController?.pushViewController(profileViewController, animated: true)
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
 

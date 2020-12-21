@@ -24,6 +24,8 @@ class SearchCoordinator: Coordinator, SearchFlow {
         let searchViewController = SearchViewController()
         searchViewController.coordinator = self
         navigationController?.pushViewController(searchViewController, animated: true)
+        navigationController?.navigationBar.barTintColor = .gray
+        
     }
     
     func coordinateToDetail(viewModel: SearchResultViewModel) {
@@ -31,8 +33,6 @@ class SearchCoordinator: Coordinator, SearchFlow {
 //        detailsViewController.coordinator = self
         detailsViewController.viewModel = viewModel
         navigationController?.pushViewController(detailsViewController, animated: true)
-        
-        
 //        let detailsCoordinator = DetailsCoordinator(navigationController: navigationController!)
 //        coordinate(to: detailsCoordinator)
     }
