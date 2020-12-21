@@ -32,6 +32,7 @@
 		655D667B258FA7D300E6F624 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D667A258FA7D300E6F624 /* ImageService.swift */; };
 		655D667E258FA86900E6F624 /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D667D258FA86900E6F624 /* UrlRequest.swift */; };
 		655D66AD2590FD8500E6F624 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 655D66AC2590FD8500E6F624 /* README.md */; };
+		655D66B2259128EF00E6F624 /* example.gif in Resources */ = {isa = PBXBuildFile; fileRef = 655D66B1259128EE00E6F624 /* example.gif */; };
 		FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		655D667A258FA7D300E6F624 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		655D667D258FA86900E6F624 /* UrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequest.swift; sourceTree = "<group>"; };
 		655D66AC2590FD8500E6F624 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		655D66B1259128EE00E6F624 /* example.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = example.gif; path = ../../../../../Downloads/example.gif; sourceTree = "<group>"; };
 		666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_flickr_autolayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.release.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.release.xcconfig"; sourceTree = "<group>"; };
 		D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				65005995258E260E00FF6E14 /* Protocols */,
 				6500597C258E1FB600FF6E14 /* Assets.xcassets */,
 				655D662B258E40D000E6F624 /* avatar.jpg */,
+				655D66B1259128EE00E6F624 /* example.gif */,
 				6500597E258E1FB600FF6E14 /* LaunchScreen.storyboard */,
 				65005981258E1FB600FF6E14 /* Info.plist */,
 				655D66AC2590FD8500E6F624 /* README.md */,
@@ -291,6 +294,7 @@
 				65005980258E1FB600FF6E14 /* LaunchScreen.storyboard in Resources */,
 				6500597D258E1FB600FF6E14 /* Assets.xcassets in Resources */,
 				655D66AD2590FD8500E6F624 /* README.md in Resources */,
+				655D66B2259128EF00E6F624 /* example.gif in Resources */,
 				655D662C258E40D000E6F624 /* avatar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -23,10 +23,12 @@ pod install
 * Profile screen with static information
 
 
-### Example
-![](https://media.giphy.com/media/gimPMRwkDuy2CodCaw/giphy.gif)
-
-
-### Plugins used
+### Pods used
 
 * [PureLayout](https://github.com/PureLayout/PureLayout)
+
+
+### Example
+![](https://github.com/dkunin9/mvvm-flickr-autolayout/blob/master/example.gif)
+
+
