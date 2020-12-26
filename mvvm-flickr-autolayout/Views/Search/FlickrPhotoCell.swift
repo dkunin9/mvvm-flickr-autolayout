@@ -60,8 +60,8 @@ class FlickrPhotoCell: UICollectionViewCell {
     }
 
     fileprivate func addViews(){
-        addSubview(thumbnailImageView)
-        addSubview(spinner)
+        contentView.addSubview(thumbnailImageView)
+        contentView.addSubview(spinner)
     }
     
     override func prepareForReuse() {
