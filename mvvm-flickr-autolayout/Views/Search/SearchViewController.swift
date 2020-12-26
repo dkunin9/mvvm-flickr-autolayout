@@ -28,6 +28,12 @@ class SearchViewController: UIViewController {
         initializeSearchControllers()
         view.backgroundColor = .white
         navigationItem.title = "First"
+        
+        // init CollectionView
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        view.addSubview(collectionView)
     }
    
    // MARK: - Methods
@@ -47,9 +53,6 @@ class SearchViewController: UIViewController {
     }
     
     func setupCollectionView() {
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .vertical
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .white
@@ -59,8 +62,6 @@ class SearchViewController: UIViewController {
         collectionView.contentInset.bottom = 20.0
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.isUserInteractionEnabled = true
-
-        view.addSubview(collectionView)
         
         // Init pin of collectionView
         collectionView.autoPinEdgesToSuperviewSafeArea()
