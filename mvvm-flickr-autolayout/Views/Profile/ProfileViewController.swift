@@ -86,7 +86,6 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController {
 
     override func loadView() {
-        super.viewDidLoad()
         view = UIView()
 
         view.addSubview(scrollView)

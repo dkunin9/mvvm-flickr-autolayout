@@ -75,9 +75,9 @@ class FlickrPhotoCell: UICollectionViewCell {
      */
     func updateContent() {
         guard let viewModel = viewModel, let imageURL = viewModel.imageURL else { return }
-        ImageService.downloadImage(from: imageURL) { [self] image in
-            spinner.stopAnimating()
-            thumbnailImageView.image = image
+        ImageService.downloadImage(from: imageURL) { [weak self] image in
+            self?.spinner.stopAnimating()
+            self?.thumbnailImageView.image = image
         }
     }
 

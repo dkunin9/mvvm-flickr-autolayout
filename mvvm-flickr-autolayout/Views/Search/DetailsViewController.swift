@@ -46,7 +46,6 @@ class DetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     
@@ -68,8 +67,8 @@ class DetailsViewController: UIViewController {
             labelTitle.text = viewModel.title
         }
         guard let imageURL = viewModel?.imageURL else { return }
-        ImageService.downloadImage(from: imageURL) { [self] image in
-            flickrImageView.image = image
+        ImageService.downloadImage(from: imageURL) { [weak self] image in
+            self?.flickrImageView.image = image
         }
     }
     
@@ -99,7 +98,6 @@ class DetailsViewController: UIViewController {
 extension DetailsViewController {
 
     override func loadView() {
-        super.viewDidLoad()
         view = UIView()
 
         view.addSubview(scrollView)
