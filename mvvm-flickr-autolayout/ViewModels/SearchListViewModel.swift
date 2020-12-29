@@ -65,8 +65,8 @@ class SearchListViewModel {
     
     func didUpdateSearchTerm() {
         guard searchTerm != "" else { return }
-        throttler.throttle { [unowned self] in
-            self.loadSearchResults(with: self.searchTerm, clearResults: true)
+        throttler.throttle { [weak self] in
+            self?.loadSearchResults(with: self!.searchTerm, clearResults: true)
         }
     }
     
