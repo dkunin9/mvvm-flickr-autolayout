@@ -1,6 +1,9 @@
 # flick-mvvm-autolayout
 
-Technical task for iOS developer position
+iOS app for searching images using Flickr API written in Swift 4.2 following MVVM design pattern
+
+![til](./mvvm-flickr-autolayout/example.gif)
+
 
 ### Running
 
@@ -27,6 +30,3 @@ pod install
 
 * [PureLayout](https://github.com/PureLayout/PureLayout)
 
-
-### Example
-![til](./mvvm-flickr-autolayout/example.gif)
