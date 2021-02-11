@@ -1,6 +1,3 @@
-# flick-mvvm-autolayout
-
-
 <p align="center">  
  iOS app for searching images using Flickr API written in Swift 4.2
 </p>
