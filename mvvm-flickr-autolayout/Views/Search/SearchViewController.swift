@@ -42,10 +42,12 @@ class SearchViewController: UIViewController {
         
         viewModel = SearchListViewModel(webService: WebService())
         let placeholderText = NSLocalizedString("Search Images", comment: "Search placeholder text")
+        searchController.searchBar.accessibilityIdentifier = AccessibilityIdentifiers.SearchField
         searchController.searchBar.placeholder = placeholderText
         searchController.searchResultsUpdater = self
         searchController.searchBar.backgroundColor = .gray
         searchController.searchBar.tintColor = .white
+        
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -55,6 +57,7 @@ class SearchViewController: UIViewController {
     func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.accessibilityIdentifier = AccessibilityIdentifiers.CollectionView
         collectionView.backgroundColor = .white
         collectionView.contentInset.top = 20.0
         collectionView.contentInset.left = 20.0

@@ -33,8 +33,21 @@
 		655D667E258FA86900E6F624 /* UrlRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D667D258FA86900E6F624 /* UrlRequest.swift */; };
 		655D66AD2590FD8500E6F624 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 655D66AC2590FD8500E6F624 /* README.md */; };
 		655D66B5259129EB00E6F624 /* example.gif in Resources */ = {isa = PBXBuildFile; fileRef = 655D66B4259129EB00E6F624 /* example.gif */; };
+		65FE93482602011B00402D26 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE93472602011B00402D26 /* AccessibilityIdentifiers.swift */; };
+		65FE93522602023900402D26 /* mvvm_flickr_autolayoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE93512602023900402D26 /* mvvm_flickr_autolayoutUITests.swift */; };
+		65FE935B2602034200402D26 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FE93472602011B00402D26 /* AccessibilityIdentifiers.swift */; };
 		FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65FE93542602023900402D26 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65005968258E1FB400FF6E14 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6500596F258E1FB400FF6E14;
+			remoteInfo = "mvvm-flickr-autolayout";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		65005970258E1FB400FF6E14 /* mvvm-flickr-autolayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvvm-flickr-autolayout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +78,10 @@
 		655D667D258FA86900E6F624 /* UrlRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlRequest.swift; sourceTree = "<group>"; };
 		655D66AC2590FD8500E6F624 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		655D66B4259129EB00E6F624 /* example.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = example.gif; sourceTree = "<group>"; };
+		65FE93472602011B00402D26 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		65FE934F2602023900402D26 /* mvvm-flickr-autolayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mvvm-flickr-autolayoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65FE93512602023900402D26 /* mvvm_flickr_autolayoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvm_flickr_autolayoutUITests.swift; sourceTree = "<group>"; };
+		65FE93532602023900402D26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		666E08BF211016B497995CF8 /* Pods_mvvm_flickr_autolayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mvvm_flickr_autolayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		768BC9403F3FD26F7AC3CAEA /* Pods-mvvm-flickr-autolayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.release.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.release.xcconfig"; sourceTree = "<group>"; };
 		D550358DB3DBF7476C9FA417 /* Pods-mvvm-flickr-autolayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mvvm-flickr-autolayout.debug.xcconfig"; path = "Target Support Files/Pods-mvvm-flickr-autolayout/Pods-mvvm-flickr-autolayout.debug.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +93,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBA634BCD6D77BB59F55A53B /* Pods_mvvm_flickr_autolayout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65FE934C2602023900402D26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				65005972258E1FB400FF6E14 /* mvvm-flickr-autolayout */,
+				65FE93502602023900402D26 /* mvvm-flickr-autolayoutUITests */,
 				65005971258E1FB400FF6E14 /* Products */,
 				47C45042222196DAE1AC4AB7 /* Pods */,
 				DE3B9BC9F963C7FAA100CF8D /* Frameworks */,
@@ -105,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				65005970258E1FB400FF6E14 /* mvvm-flickr-autolayout.app */,
+				65FE934F2602023900402D26 /* mvvm-flickr-autolayoutUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				65005973258E1FB400FF6E14 /* AppDelegate.swift */,
+				65FE93472602011B00402D26 /* AccessibilityIdentifiers.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -223,6 +250,15 @@
 			path = Binding;
 			sourceTree = "<group>";
 		};
+		65FE93502602023900402D26 /* mvvm-flickr-autolayoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				65FE93512602023900402D26 /* mvvm_flickr_autolayoutUITests.swift */,
+				65FE93532602023900402D26 /* Info.plist */,
+			);
+			path = "mvvm-flickr-autolayoutUITests";
+			sourceTree = "<group>";
+		};
 		DE3B9BC9F963C7FAA100CF8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +289,24 @@
 			productReference = 65005970258E1FB400FF6E14 /* mvvm-flickr-autolayout.app */;
 			productType = "com.apple.product-type.application";
 		};
+		65FE934E2602023900402D26 /* mvvm-flickr-autolayoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65FE93562602023900402D26 /* Build configuration list for PBXNativeTarget "mvvm-flickr-autolayoutUITests" */;
+			buildPhases = (
+				65FE934B2602023900402D26 /* Sources */,
+				65FE934C2602023900402D26 /* Frameworks */,
+				65FE934D2602023900402D26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65FE93552602023900402D26 /* PBXTargetDependency */,
+			);
+			name = "mvvm-flickr-autolayoutUITests";
+			productName = "mvvm-flickr-autolayoutUITests";
+			productReference = 65FE934F2602023900402D26 /* mvvm-flickr-autolayoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,6 +319,10 @@
 					6500596F258E1FB400FF6E14 = {
 						CreatedOnToolsVersion = 12.2;
 						LastSwiftMigration = 1220;
+					};
+					65FE934E2602023900402D26 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 6500596F258E1FB400FF6E14;
 					};
 				};
 			};
@@ -282,6 +340,7 @@
 			projectRoot = "";
 			targets = (
 				6500596F258E1FB400FF6E14 /* mvvm-flickr-autolayout */,
+				65FE934E2602023900402D26 /* mvvm-flickr-autolayoutUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +355,13 @@
 				655D66AD2590FD8500E6F624 /* README.md in Resources */,
 				655D66B5259129EB00E6F624 /* example.gif in Resources */,
 				655D662C258E40D000E6F624 /* avatar.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65FE934D2602023900402D26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +415,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6500599F258E271C00FF6E14 /* MainTabController.swift in Sources */,
+				65FE93482602011B00402D26 /* AccessibilityIdentifiers.swift in Sources */,
 				655D667E258FA86900E6F624 /* UrlRequest.swift in Sources */,
 				655D6639258E5E3800E6F624 /* SearchListViewModel.swift in Sources */,
 				650059AB258E27B500FF6E14 /* ProfileCoordinator.swift in Sources */,
@@ -372,7 +439,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65FE934B2602023900402D26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65FE93522602023900402D26 /* mvvm_flickr_autolayoutUITests.swift in Sources */,
+				65FE935B2602034200402D26 /* AccessibilityIdentifiers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65FE93552602023900402D26 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6500596F258E1FB400FF6E14 /* mvvm-flickr-autolayout */;
+			targetProxy = 65FE93542602023900402D26 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6500597E258E1FB600FF6E14 /* LaunchScreen.storyboard */ = {
@@ -546,6 +630,46 @@
 			};
 			name = Release;
 		};
+		65FE93572602023900402D26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFX2JC7XN5;
+				INFOPLIST_FILE = "mvvm-flickr-autolayoutUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dkunin9.mvvm-flickr-autolayoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mvvm-flickr-autolayout";
+			};
+			name = Debug;
+		};
+		65FE93582602023900402D26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KFX2JC7XN5;
+				INFOPLIST_FILE = "mvvm-flickr-autolayoutUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dkunin9.mvvm-flickr-autolayoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "mvvm-flickr-autolayout";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -563,6 +687,15 @@
 			buildConfigurations = (
 				65005985258E1FB600FF6E14 /* Debug */,
 				65005986258E1FB600FF6E14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65FE93562602023900402D26 /* Build configuration list for PBXNativeTarget "mvvm-flickr-autolayoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65FE93572602023900402D26 /* Debug */,
+				65FE93582602023900402D26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

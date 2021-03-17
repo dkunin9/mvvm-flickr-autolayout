@@ -89,6 +89,11 @@ class DetailsViewController: UIViewController {
         if let error = error {
             print(error.localizedDescription)
         } else {
+            var refreshAlert = UIAlertController(title: "Great!", message: "The image was successfully saved", preferredStyle: .alert)
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+              print("Handle Ok logic here")
+              }))
+            present(refreshAlert, animated: true, completion: nil)
             print("Successfully saved")
         }
     }
