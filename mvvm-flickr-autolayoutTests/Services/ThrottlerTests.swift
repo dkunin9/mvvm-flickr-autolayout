@@ -10,11 +10,6 @@ import XCTest
 
 class ThrottlerTests: XCTestCase {
     
-    let backgroundQueue = DispatchQueue.global(qos: .background)
-    var pendingWorkItem: DispatchWorkItem = DispatchWorkItem(block: {})
-    var lastJobDate: Date = Date.distantPast
-    var interval: Double = 3.0
-    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -23,27 +18,22 @@ class ThrottlerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    //MARK: Test - Throttle
+    
     func testThrottle() throws {
+        let interval: Double = 3.0
+        let throttler = Throttler(seconds: 3.0)
         var time1 = Date().timeIntervalSinceReferenceDate
         let time2 = time1
         let expectation = self.expectation(description: "myexpo")
-        throttle(block: {
+        throttler.throttle(block: {
             time1 = Date().timeIntervalSinceReferenceDate
             expectation.fulfill()
         })
         self.waitForExpectations(timeout: 5, handler: nil)
+        
         XCTAssertNotEqual(Int(time1), Int(time2))
         XCTAssertEqual(Int(interval), Int(time1) - Int(time2))
-    }
-    
-    func throttle(block: @escaping () -> ()) {
-        pendingWorkItem.cancel()
-        pendingWorkItem = DispatchWorkItem() { [weak self] in
-            self?.lastJobDate = Date()
-            block()
-        }
-        let delay = Double(Date().timeIntervalSince(lastJobDate).rounded()) < interval ? 0 : interval
-        backgroundQueue.asyncAfter(deadline: .now() + delay, execute: pendingWorkItem)
     }
 
 }

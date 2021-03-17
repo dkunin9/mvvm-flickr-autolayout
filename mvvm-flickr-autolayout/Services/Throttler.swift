@@ -30,7 +30,7 @@ class Throttler {
             self?.lastJobDate = Date()
             block()
         }
-        let delay = Double(Date().timeIntervalSince(lastJobDate).rounded()) > interval ? 0 : interval
+        let delay = Double(Date().timeIntervalSince(lastJobDate).rounded()) < interval ? 0 : interval
         backgroundQueue.asyncAfter(deadline: .now() + delay, execute: pendingWorkItem)
     }
 }
