@@ -23,6 +23,7 @@ class WebServiceTests: XCTestCase {
         let nextPage = currentPage + 1
         webService.loadSearchResultsServer(searchTerm: query, page: nextPage) { [weak self] error, searchGroup in
             guard error == nil else {
+                XCTFail("Failure: \(error!.localizedDescription)")
                 return
             }
             if let searchGroup = searchGroup as? SearchGroup, let searchResults = searchGroup.searchResults {

@@ -7,10 +7,10 @@
 
 import UIKit
 
-class MainTabCoordinator: Coordinator {
-    
+class MainTabCoordinator: Coordinator {    
     
     let navigationController: UINavigationController
+
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
