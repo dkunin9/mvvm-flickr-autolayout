@@ -1,0 +1,36 @@
+{
+    "stat" : "ok",
+    "photos" : {
+        "perpage" : 20,
+        "pages" : 1,
+        "photo" : [
+            {
+                "owner" : "user12312",
+                "secret" : "ce24806466",
+                "server" : "1907",
+                "id" : "7432654189",
+                "farm" : 2,
+                "title" : "Moon",
+                "isfriend" : 0,
+                "isfamily" : 0,
+                "ispublic" : 1,
+                "url_m" : "https://some address",
+            },
+            {
+                "owner" : "user28193",
+                "secret" : "24c88e68b3",
+                "server" : "1910",
+                "id" : "322873490",
+                "farm" : 2,
+                "title" : "Mars",
+                "isfriend" : 0,
+                "isfamily" : 0,
+                "ispublic" : 1,
+                "url_m" : "https://some address",
+            }
+        ],
+        "total" : "2",
+        "page" : 1
+    }
+}
+
