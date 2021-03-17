@@ -14,7 +14,7 @@
                 "isfriend" : 0,
                 "isfamily" : 0,
                 "ispublic" : 1,
-                "url_m" : "https://some address",
+                "url_m" : "https://some.address",
             },
             {
                 "owner" : "user28193",
@@ -26,7 +26,7 @@
                 "isfriend" : 0,
                 "isfamily" : 0,
                 "ispublic" : 1,
-                "url_m" : "https://some address",
+                "url_m" : "https://some.address",
             }
         ],
         "total" : "2",

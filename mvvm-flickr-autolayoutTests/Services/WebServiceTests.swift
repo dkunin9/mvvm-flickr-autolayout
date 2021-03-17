@@ -14,15 +14,6 @@ class WebServiceTests: XCTestCase {
     
     var viewModels = [SearchResultViewModel]()
     
-    
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
     //MARK: Test - API Call to Flickr server
     
     func testNetworkDataRequestSuccess() {
@@ -37,14 +28,14 @@ class WebServiceTests: XCTestCase {
     //MARK: Fetch data from Flickr and and append to ViewModel
     
     /*
-     see original method in extension for SearchListViewModel
+     see original method in Extension for ViewModels/SearchListViewModel
+     p.s. had to added XCTestExpectation
      */
     func loadSearchResults(with query: String, enableThrottling: Bool = false, clearResults: Bool = false, expectation: XCTestExpectation) {
         let currentPage = 0
         let nextPage = currentPage + 1
         webService.loadSearchResultsServer(searchTerm: query, page: nextPage) { [weak self] error, searchGroup in
             guard error == nil else {
-                print("error == nil")
                 return
             }
             if let searchGroup = searchGroup as? SearchGroup, let searchResults = searchGroup.searchResults {
@@ -58,13 +49,5 @@ class WebServiceTests: XCTestCase {
             }
         }
     }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
 }
 
