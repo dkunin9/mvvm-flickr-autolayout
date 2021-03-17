@@ -34,7 +34,8 @@ class WebServiceTests: XCTestCase {
         XCTAssertEqual(viewModels.count, 20)
     }
     
-    //MARK: Map data to ViewModel
+    //MARK: Fetch data from Flickr and and append to ViewModel
+    
     /*
      see original method in extension for SearchListViewModel
      */
