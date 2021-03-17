@@ -17,13 +17,13 @@ class ThrottlerTests: XCTestCase {
         let throttler = Throttler(seconds: 3.0)
         var time1 = Date().timeIntervalSinceReferenceDate
         let time2 = time1
-        let expectation = self.expectation(description: "myexpo")
+        let expectation = self.expectation(description: "throttle_expectation")
         throttler.throttle(block: {
             time1 = Date().timeIntervalSinceReferenceDate
             expectation.fulfill()
         })
         self.waitForExpectations(timeout: 5, handler: nil)
         XCTAssertNotEqual(Int(time1), Int(time2))
-        XCTAssertEqual(Int(interval), Int(time1) - Int(time2), "Throttle interval: [\(interval)s] is incorrect")
+        XCTAssertEqual(Int(interval), Int(time1) - Int(time2), "Failure: throttle interval: [\(interval)s] doesn't work right")
     }
 }

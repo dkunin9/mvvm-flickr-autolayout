@@ -18,7 +18,7 @@ class WebServiceTests: XCTestCase {
     
     func testNetworkDataRequestSuccess() {
         let query = "electrolux"
-        let expectation = self.expectation(description: "myexp")
+        let expectation = self.expectation(description: "webservice_expectation")
         let currentPage = 0
         let nextPage = currentPage + 1
         webService.loadSearchResultsServer(searchTerm: query, page: nextPage) { [weak self] error, searchGroup in
@@ -36,7 +36,7 @@ class WebServiceTests: XCTestCase {
             }
         }
         self.waitForExpectations(timeout: 10, handler: nil)
-        XCTAssertNotNil(viewModels, "Found nil while fetching data from API")
-        XCTAssertEqual(viewModels.count, 20, "Images count is not equal to 20")
+        XCTAssertNotNil(viewModels, "Failure: Found nil while fetching data from API")
+        XCTAssertEqual(viewModels.count, 20, "Failure: Number of images is not equal to 20")
     }
 }
