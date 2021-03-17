@@ -20,7 +20,7 @@ class SearchResultTests: XCTestCase {
     
     //MARK: Test - SearchResult Model from Data.json
     
-    func testFlickrPhotosJSONDecoder() throws {
+    func testSearchResultModel() throws {
         let searchGroup = getSearchGroup()
         let searchResults = searchGroup.searchResults as! [FlickrPhoto]
         XCTAssertNotNil(searchResults)

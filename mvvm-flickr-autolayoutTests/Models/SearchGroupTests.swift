@@ -20,7 +20,7 @@ class SearchGroupTests: XCTestCase {
     
     //MARK: Test - SearchGroup Model from Data.json
     
-    func testFlickrPhotosJSONDecoder() throws {
+    func testSearchGroupModel() throws {
         let bundle = Bundle(for: type(of: self))
         let fileUrl = bundle.url(forResource: "Data", withExtension: "json")!
         let data = try! Data(contentsOf: fileUrl)
