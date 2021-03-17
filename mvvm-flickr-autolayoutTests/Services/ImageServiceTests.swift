@@ -16,7 +16,7 @@ class ImageServiceTests: XCTestCase {
         let expectation = self.expectation(description: "myexp")
         let imageURL = URL(string: "https://live.staticflickr.com/65535/50807403977_f82abcd06a.jpg")
         ImageService.downloadImage(from: imageURL) { image in
-            XCTAssertNotNil(image)
+            XCTAssertNotNil(image, "Failure! Image was not downloaded.")
             expectation.fulfill()
         }
         self.waitForExpectations(timeout: 3, handler: nil)

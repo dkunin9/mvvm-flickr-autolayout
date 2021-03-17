@@ -23,9 +23,8 @@ class ThrottlerTests: XCTestCase {
             expectation.fulfill()
         })
         self.waitForExpectations(timeout: 5, handler: nil)
-        
         XCTAssertNotEqual(Int(time1), Int(time2))
-        XCTAssertEqual(Int(interval), Int(time1) - Int(time2))
+        XCTAssertEqual(Int(interval), Int(time1) - Int(time2), "Throttle interval is incorrect")
     }
 
 }
