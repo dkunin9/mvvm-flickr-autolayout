@@ -20,6 +20,7 @@ class SearchGroupTests: XCTestCase {
         let searchGroup = SearchGroup(with: dictionary!)
         XCTAssertTrue(searchGroup.page == 1)
         XCTAssertTrue(searchGroup.perPage == 20)
+        XCTAssertNotNil(searchGroup.searchResults, "Failure: Data was not fetched from Data.json")
     }
 
 }

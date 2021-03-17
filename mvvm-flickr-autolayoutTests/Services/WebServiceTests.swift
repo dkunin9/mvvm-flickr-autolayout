@@ -37,5 +37,6 @@ class WebServiceTests: XCTestCase {
         }
         self.waitForExpectations(timeout: 10, handler: nil)
         XCTAssertNotNil(viewModels, "Found nil while fetching data from API")
-        XCTAssertEqual(viewModels.count, 20, "Images count is not equl to 20")
+        XCTAssertEqual(viewModels.count, 20, "Images count is not equal to 20")
     }
+}
