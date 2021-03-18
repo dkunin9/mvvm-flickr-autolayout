@@ -22,7 +22,7 @@ class AppTests: XCTestCase {
         let searchField = app.otherElements[AccessibilityIdentifiers.SearchField].searchFields.firstMatch
         searchField.tap()
         searchField.typeText("Electrolux")
-        app/*@START_MENU_TOKEN@*/.otherElements["PopoverDismissRegion"]/*[[".otherElements[\"dismiss popup\"]",".otherElements[\"PopoverDismissRegion\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.otherElements["PopoverDismissRegion"].tap()
         
         let collectionView = app.collectionViews[AccessibilityIdentifiers.CollectionView]
         collectionView.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.tap()
