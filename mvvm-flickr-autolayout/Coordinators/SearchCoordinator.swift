@@ -11,10 +11,13 @@ protocol SearchFlow: class {
     func coordinateToDetail(viewModel: SearchResultViewModel)
 }
 
+// регулярные  выражения
+// hash колизии дикшионари
+
 
 class SearchCoordinator: Coordinator, SearchFlow {
     
-    var navigationController: UINavigationController?
+    var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -23,13 +26,13 @@ class SearchCoordinator: Coordinator, SearchFlow {
     func start() {
         let searchViewController = SearchViewController()
         searchViewController.coordinator = self
-        navigationController?.pushViewController(searchViewController, animated: true)
-        navigationController?.navigationBar.barTintColor = .gray
+        navigationController.pushViewController(searchViewController, animated: true)
+        navigationController.navigationBar.barTintColor = .gray
     }
     
     func coordinateToDetail(viewModel: SearchResultViewModel) {
         let detailsViewController = DetailsViewController()
         detailsViewController.viewModel = viewModel
-        navigationController?.pushViewController(detailsViewController, animated: true)
+        navigationController.pushViewController(detailsViewController, animated: true)
     }
 }

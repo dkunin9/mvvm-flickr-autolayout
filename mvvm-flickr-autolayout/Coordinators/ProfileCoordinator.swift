@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileCoordinator: Coordinator {
     
-    var navigationController: UINavigationController?
+    var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -17,10 +17,10 @@ class ProfileCoordinator: Coordinator {
     
     func start() {
         let profileViewController = ProfileViewController()
-        navigationController?.pushViewController(profileViewController, animated: true)
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController.pushViewController(profileViewController, animated: true)
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.barTintColor = .black
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
 
